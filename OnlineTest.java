@@ -80,7 +80,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
             if (check())
                 count = count + 1;
             current++;
-            JOptionPane.showMessageDialog(this, "correct answers= " + count + "\n Result =" + count/10*100 + "%");
+            JOptionPane.showMessageDialog(this, "correct answers= " + count + "\n Result =" + (count*10) + "%");
 
             System.exit(0);
         }
@@ -90,74 +90,89 @@ public class OnlineTest extends JFrame implements  ActionListener{
     void set() {
         radioButton[4].setSelected(true);
         if (current == 0) {
-            label.setText("Que1:  Which is an official language for Android Development ?");
-            radioButton[0].setText("Java");
-            radioButton[1].setText("Kotlin");
-            radioButton[2].setText("C++");
-            radioButton[3].setText("Javascript");
+            label.setText("Que1:  What is value of a in following expression? 
+int a = 10 + 4.867; ?");
+            radioButton[0].setText("a = 10");
+            radioButton[1].setText("a = 14.867");
+            radioButton[2].setText("a = 14");
+            radioButton[3].setText("a = 4");
         }
         if (current == 1) {
-            label.setText("Que2:  Which feature of java 7 allows to not explicitly close IO resource?");
-            radioButton[0].setText("try catch finally");
-            radioButton[1].setText("IOException");
-            radioButton[2].setText("AutoCloseable");
-            radioButton[3].setText("Streams");
+            label.setText("Que2: Which among the following is a Conditional Operator in C ?");
+            radioButton[0].setText("?:");
+            radioButton[1].setText(":?");
+            radioButton[2].setText("<=");
+            radioButton[3].setText(">=");
         }
         if (current == 2) {
-            label.setText("Que3: SessionFactory is a thread-safe object.");
-            radioButton[0].setText("true");
-            radioButton[1].setText("false");
-            radioButton[2].setText("don't know");
-            radioButton[3].setText("false");
+            label.setText("Que3: What is the Format specifier used to print a character in C.?");
+            radioButton[0].setText("%s");
+            radioButton[1].setText("%c");
+            radioButton[2].setText("%C");
+            radioButton[3].setText("%w");
         }
         if (current == 3) {
-            label.setText("Que4: Which is the new method introduced in java 8 to iterate over a collection?");
-            radioButton[0].setText("for (String i : StringList)");
-            radioButton[1].setText("foreach (String i : StringList)");
-            radioButton[2].setText("StringList.forEach()");
-            radioButton[3].setText("List.for()");
+            label.setText("Que4: What will be the output of the following program? \n
+                 \t int main()
+                   \n\t     {
+                       \n\t  int a,b,c,d,e,f,g,h,k;
+                       \n\t a=8, b=4, c=2, d=1, e=5, f=20;
+                       \n\t printf("%d\n",a+b-(c+d)*3%e+f/9); 
+                       \n\treturn 0;
+                       \n\t }");
+            radioButton[0].setText("10");
+            radioButton[1].setText("9");
+            radioButton[2].setText("8");
+            radioButton[3].setText("20");
         }
         if (current == 4) {
-            label.setText("Que5:  What is the substitute of Rhino javascript engine in Java 8?");
-            radioButton[0].setText(" Nashorn");
-            radioButton[1].setText("V8");
-            radioButton[2].setText("Inscript");
-            radioButton[3].setText("Narcissus");
+            label.setText("Que5: Which one of the following is a valid C expression?");
+            radioButton[0].setText("int my_number=1000;");
+            radioButton[1].setText("int my-number=1000");
+            radioButton[2].setText("int my@number=1000");
+            radioButton[3].setText("int @mtnumber=1000");
         }
         if (current == 5) {
-            label.setText("Que6: How to read entire file in one line using java 8?");
-            radioButton[0].setText("Files.readAllLines()");
-            radioButton[1].setText("Files.read()");
-            radioButton[2].setText("Files.readFile()");
-            radioButton[3].setText("Files.lines()");
+            label.setText("Que6: What inbuilt function should be used to return a value rounded up to the next higher 
+integer ?");
+            radioButton[0].setText("Floor");
+            radioButton[1].setText("Malloc");
+            radioButton[2].setText("Puts");
+            radioButton[3].setText("ceil");
         }
         if (current == 6) {
-            label.setText("Que7:  Which feature of java 7 allows to not explicitly close IO resource?");
-            radioButton[0].setText("try catch finally");
-            radioButton[1].setText("IOException");
-            radioButton[2].setText("AutoCloseable");
-            radioButton[3].setText("Streams");
+            label.setText("Que7:  Which storage class is called as default storage class ?");
+            radioButton[0].setText("auto");
+            radioButton[1].setText("register");
+            radioButton[2].setText("static");
+            radioButton[3].setText("extern");
         }
         if (current == 7) {
-            label.setText("Que8:  Which of the following is not a core interface of Hibernate?");
-            radioButton[0].setText("Configuration");
-            radioButton[1].setText("Criteria");
-            radioButton[2].setText("SessionManagement");
-            radioButton[3].setText("Session");
+            label.setText("Que8:  Which among the following is an exit controlled loop ?");
+            radioButton[0].setText("For");
+            radioButton[1].setText("While");
+            radioButton[2].setText("do....while");
+            radioButton[3].setText("if....else");
         }
         if (current == 8) {
-            label.setText("Que9: SessionFactory is a thread-safe object.");
-            radioButton[0].setText("true");
-            radioButton[1].setText("false");
-            radioButton[2].setText("don't know");
-            radioButton[3].setText("false");
+            label.setText("Que9: Which of the following operators takes only integer operands?");
+            radioButton[0].setText("+");
+            radioButton[1].setText("_*);
+            radioButton[2].setText("/");
+            radioButton[3].setText("%");
         }
         if (current == 9) {
-            label.setText("Que10: Which of the following is not a state of object in Hibernate?");
-            radioButton[0].setText("Attached()");
-            radioButton[1].setText("Detached()");
-            radioButton[2].setText("Persistent()");
-            radioButton[3].setText("Transient()");
+            label.setText("Que10: What is the output of the program.?
+                                \n\t     int main()
+                                \n\t     {
+                                \n\t     float a = 45;
+                                \n\t     printf("%f", a);
+                                \n\t     return 0;
+                                \n\t    }");
+            radioButton[0].setText("45");
+            radioButton[1].setText("45.0");
+            radioButton[2].setText("45.000000000");
+            radioButton[3].setText("0.000000");
         }
         label.setBounds(30, 40, 450, 20);
         for (int i = 0, j = 0; i <= 90; i += 30, j++)
@@ -167,30 +182,30 @@ public class OnlineTest extends JFrame implements  ActionListener{
     // declare right answers.
     boolean check() {
         if (current == 0)
-            return (radioButton[1].isSelected());
-        if (current == 1)
-            return (radioButton[1].isSelected());
-        if (current == 2)
-            return (radioButton[0].isSelected());
-        if (current == 3)
             return (radioButton[2].isSelected());
+        if (current == 1)
+            return (radioButton[0].isSelected());
+        if (current == 2)
+            return (radioButton[1].isSelected());
+        if (current == 3)
+            return (radioButton[0].isSelected());
         if (current == 4)
             return (radioButton[0].isSelected());
         if (current == 5)
-            return (radioButton[0].isSelected());
+            return (radioButton[3].isSelected());
         if (current == 6)
-            return (radioButton[1].isSelected());
+            return (radioButton[0].isSelected());
         if (current == 7)
             return (radioButton[2].isSelected());
         if (current == 8)
-            return (radioButton[0].isSelected());
+            return (radioButton[3].isSelected());
         if (current == 9)
-            return (radioButton[0].isSelected());
+            return (radioButton[2].isSelected());
         return false;
     }
 
     public static void main(String s[]) {
-        new OnlineTest("Simple Quiz App");
+        new OnlineTest("QUIZBEE");
     }
 
 }
