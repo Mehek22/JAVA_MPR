@@ -71,7 +71,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
                 count = count + 1;
             i++;
             set();
-            if (current[i] == current.length-1) {
+            if (current[i] == current[current.length-1]) {
                 btnNext.setEnabled(false);
                 btnResult.setVisible(true);
                 btnResult.setText("Result");
@@ -194,11 +194,15 @@ public class OnlineTest extends JFrame implements  ActionListener{
     public static void main(String s[]) {
         new OnlineTest("QUIZBEE");
         Random rand = new Random();
-        for (int i = 0; i < current.length; i++) {
-            int randomIndexToSwap = rand.nextInt(current.length);
-            int temp = current[randomIndexToSwap];
-            current[randomIndexToSwap] = current[i];
-            current[i] = temp;
+        try {
+            for (int i = 0; i < current.length; i++) {
+                int randomIndexToSwap = rand.nextInt(current.length);
+                int temp = current[randomIndexToSwap];
+                current[randomIndexToSwap] = current[i];
+                current[i] = temp;
+            }
+        }catch (Exception e){
+            System.out.println("An error has occurred");
         }
     }
 
