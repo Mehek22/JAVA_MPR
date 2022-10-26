@@ -92,70 +92,70 @@ public class OnlineTest extends JFrame implements  ActionListener{
     void set() {
         radioButton[4].setSelected(true);
         if (current[i] == 0) {
-            label.setText("Que1:  What is value of a in following expression? \n int a = 10 + 4.867; ?");
+            label.setText("Question:  What is value of a in following expression? \n int a = 10 + 4.867; ?");
             radioButton[0].setText("a = 10");
             radioButton[1].setText("a = 14.867");
             radioButton[2].setText("a = 14");
             radioButton[3].setText("a = 4");
         }
         if (current[i] == 1) {
-            label.setText("Que2: Which among the following is a Conditional Operator in C ?");
+            label.setText("Question: Which among the following is a Conditional Operator in C ?");
             radioButton[0].setText("?:");
             radioButton[1].setText(":?");
             radioButton[2].setText("<=");
             radioButton[3].setText(">=");
         }
         if (current[i] == 2) {
-            label.setText("Que3: What is the Format specifier used to print a character in C.?");
+            label.setText("Question: What is the Format specifier used to print a character in C.?");
             radioButton[0].setText("%s");
             radioButton[1].setText("%c");
             radioButton[2].setText("%C");
             radioButton[3].setText("%w");
         }
         if (current[i] == 3) {
-            label.setText("Que4: 3. How is an array initialized in C language?");
+            label.setText("Question: How is an array initialized in C language?");
             radioButton[0].setText("int a[3]= {1,2,3};");
             radioButton[1].setText("int a(3)= {!,2,3}");
             radioButton[2].setText("int []a= new int[3]");
             radioButton[3].setText("int a={1,2,3}");
         }
         if (current[i] == 4) {
-            label.setText("Que5: Which one of the following is a valid C expression?");
+            label.setText("Question: Which one of the following is a valid C expression?");
             radioButton[0].setText("int my_number=1000;");
             radioButton[1].setText("int my-number=1000");
             radioButton[2].setText("int my@number=1000");
             radioButton[3].setText("int @mynumber=1000");
         }
         if (current[i] == 5) {
-            label.setText("Que6: What inbuilt function should be used to return a value rounded up to the next higher integer ?");
+            label.setText("Question: What inbuilt function should be used to return a value rounded up to the next higher integer ?");
             radioButton[0].setText("Floor");
             radioButton[1].setText("Malloc");
             radioButton[2].setText("Puts");
             radioButton[3].setText("ceil");
         }
         if (current[i] == 6) {
-            label.setText("Que7:  Which storage class is called as default storage class ?");
+            label.setText("Question:  Which storage class is called as default storage class ?");
             radioButton[0].setText("auto");
             radioButton[1].setText("register");
             radioButton[2].setText("static");
             radioButton[3].setText("extern");
         }
         if (current[i] == 7) {
-            label.setText("Que8:  Which among the following is an exit controlled loop ?");
+            label.setText("Question:  Which among the following is an exit controlled loop ?");
             radioButton[0].setText("For");
             radioButton[1].setText("While");
             radioButton[2].setText("do....while");
             radioButton[3].setText("if....else");
         }
         if (current[i] == 8) {
-            label.setText("Que9: Which of the following operators takes only integer operands?");
+            label.setText("Question: Which of the following operators takes only integer operands?");
             radioButton[0].setText("+");
             radioButton[1].setText("*");
             radioButton[2].setText("/");
             radioButton[3].setText("%");
         }
         if (current[i] == 9) {
-            label.setText("Que10: How are String represented in memory in C?");
+            label.setText("Question: How are String represented in memory in C?");
             radioButton[0].setText("An array of characters");
             radioButton[1].setText("Object of some class");
             radioButton[2].setText("Same as other primitive types");
