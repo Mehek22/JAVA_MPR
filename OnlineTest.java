@@ -192,7 +192,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
     }
 
     public static void main(String s[]) {
-        new OnlineTest("QUIZBEE");
+
         Random rand = new Random();
         try {
             for (int i = 0; i < current.length; i++) {
@@ -204,6 +204,8 @@ public class OnlineTest extends JFrame implements  ActionListener{
         }catch (Exception e){
             System.out.println("An error has occurred");
         }
+
+        new OnlineTest("QUIZBEE");
     }
 
 }
