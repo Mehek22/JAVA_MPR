@@ -82,7 +82,8 @@ public class OnlineTest extends JFrame implements  ActionListener{
             if (check())
                 count = count + 1;
             i++;
-            JOptionPane.showMessageDialog(this, "correct answers= " + count + "\n Result =" + (count*10) + "%");
+               ImageIcon img = new ImageIcon("imgsmall.png");
+            JOptionPane.showMessageDialog(this, "correct answers= " + count + "\n Result =" + (count*10) + "%",  "RESULT" , JOptionPane.PLAIN_MESSAGE, img);
 
             System.exit(0);
         }
@@ -187,7 +188,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
         if (current[i] == 8)
             return (radioButton[3].isSelected());
         if (current[i] == 9)
-            return (radioButton[2].isSelected());
+            return (radioButton[0].isSelected());
         return false;
     }
 
