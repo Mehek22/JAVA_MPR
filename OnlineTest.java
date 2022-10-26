@@ -124,7 +124,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
             radioButton[0].setText("int my_number=1000;");
             radioButton[1].setText("int my-number=1000");
             radioButton[2].setText("int my@number=1000");
-            radioButton[3].setText("int @mtnumber=1000");
+            radioButton[3].setText("int @mynumber=1000");
         }
         if (current[i] == 5) {
             label.setText("Que6: What inbuilt function should be used to return a value rounded up to the next higher integer ?");
@@ -150,7 +150,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
         if (current[i] == 8) {
             label.setText("Que9: Which of the following operators takes only integer operands?");
             radioButton[0].setText("+");
-            radioButton[1].setText("_*");
+            radioButton[1].setText("*");
             radioButton[2].setText("/");
             radioButton[3].setText("%");
         }
