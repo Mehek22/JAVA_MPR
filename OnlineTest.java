@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+import java.util.*;
 
 
 public class OnlineTest extends JFrame implements  ActionListener{
@@ -19,7 +20,8 @@ public class OnlineTest extends JFrame implements  ActionListener{
     JRadioButton radioButton[] = new JRadioButton[5];
     JButton btnNext, btnResult;
     ButtonGroup bg;
-    int count = 0, current = 0, x = 1, y = 1, now = 0;
+    int count = 0, x = 1, y = 1, i = 0;
+    public static int[] current = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int m[] = new int[10];
 
     // create jFrame with radioButton and JButton
@@ -67,9 +69,9 @@ public class OnlineTest extends JFrame implements  ActionListener{
         if (e.getSource() == btnNext) {
             if (check())
                 count = count + 1;
-            current++;
+            i++;
             set();
-            if (current == 9) {
+            if (current[i] == current.length-1) {
                 btnNext.setEnabled(false);
                 btnResult.setVisible(true);
                 btnResult.setText("Result");
@@ -79,7 +81,7 @@ public class OnlineTest extends JFrame implements  ActionListener{
         if (e.getActionCommand().equals("Result")) {
             if (check())
                 count = count + 1;
-            current++;
+            i++;
             JOptionPane.showMessageDialog(this, "correct answers= " + count + "\n Result =" + (count*10) + "%");
 
             System.exit(0);
@@ -89,86 +91,71 @@ public class OnlineTest extends JFrame implements  ActionListener{
     // SET Questions with options
     void set() {
         radioButton[4].setSelected(true);
-        if (current == 0) {
-            label.setText("Que1:  What is value of a in following expression? 
-int a = 10 + 4.867; ?");
+        if (current[i] == 0) {
+            label.setText("Que1:  What is value of a in following expression? \n int a = 10 + 4.867; ?");
             radioButton[0].setText("a = 10");
             radioButton[1].setText("a = 14.867");
             radioButton[2].setText("a = 14");
             radioButton[3].setText("a = 4");
         }
-        if (current == 1) {
+        if (current[i] == 1) {
             label.setText("Que2: Which among the following is a Conditional Operator in C ?");
             radioButton[0].setText("?:");
             radioButton[1].setText(":?");
             radioButton[2].setText("<=");
             radioButton[3].setText(">=");
         }
-        if (current == 2) {
+        if (current[i] == 2) {
             label.setText("Que3: What is the Format specifier used to print a character in C.?");
             radioButton[0].setText("%s");
             radioButton[1].setText("%c");
             radioButton[2].setText("%C");
             radioButton[3].setText("%w");
         }
-        if (current == 3) {
-            label.setText("Que4: What will be the output of the following program? \n
-                 \t int main()
-                   \n\t     {
-                       \n\t  int a,b,c,d,e,f,g,h,k;
-                       \n\t a=8, b=4, c=2, d=1, e=5, f=20;
-                       \n\t printf("%d\n",a+b-(c+d)*3%e+f/9); 
-                       \n\treturn 0;
-                       \n\t }");
+        if (current[i] == 3) {
+            label.setText("Que4: What will be the output of the following program? \nint main() { \nint a,b,c,d,e,f,g,h,k;\na=8, b=4, c=2, d=1, e=5, f=20;  \n printf(%d,a+b-(c+d)*3%e+f/9);  \nreturn 0; \n}");
             radioButton[0].setText("10");
             radioButton[1].setText("9");
             radioButton[2].setText("8");
             radioButton[3].setText("20");
         }
-        if (current == 4) {
+        if (current[i] == 4) {
             label.setText("Que5: Which one of the following is a valid C expression?");
             radioButton[0].setText("int my_number=1000;");
             radioButton[1].setText("int my-number=1000");
             radioButton[2].setText("int my@number=1000");
             radioButton[3].setText("int @mtnumber=1000");
         }
-        if (current == 5) {
-            label.setText("Que6: What inbuilt function should be used to return a value rounded up to the next higher 
-integer ?");
+        if (current[i] == 5) {
+            label.setText("Que6: What inbuilt function should be used to return a value rounded up to the next higher integer ?");
             radioButton[0].setText("Floor");
             radioButton[1].setText("Malloc");
             radioButton[2].setText("Puts");
             radioButton[3].setText("ceil");
         }
-        if (current == 6) {
+        if (current[i] == 6) {
             label.setText("Que7:  Which storage class is called as default storage class ?");
             radioButton[0].setText("auto");
             radioButton[1].setText("register");
             radioButton[2].setText("static");
             radioButton[3].setText("extern");
         }
-        if (current == 7) {
+        if (current[i] == 7) {
             label.setText("Que8:  Which among the following is an exit controlled loop ?");
             radioButton[0].setText("For");
             radioButton[1].setText("While");
             radioButton[2].setText("do....while");
             radioButton[3].setText("if....else");
         }
-        if (current == 8) {
+        if (current[i] == 8) {
             label.setText("Que9: Which of the following operators takes only integer operands?");
             radioButton[0].setText("+");
-            radioButton[1].setText("_*);
+            radioButton[1].setText("_*");
             radioButton[2].setText("/");
             radioButton[3].setText("%");
         }
-        if (current == 9) {
-            label.setText("Que10: What is the output of the program.?
-                                \n\t     int main()
-                                \n\t     {
-                                \n\t     float a = 45;
-                                \n\t     printf("%f", a);
-                                \n\t     return 0;
-                                \n\t    }");
+        if (current[i] == 9) {
+            label.setText("Que10: What is the output of the program.?\n int main()\n     {\n     float a = 45;\n     printf('%f', a);\n     return 0;\n    }");
             radioButton[0].setText("45");
             radioButton[1].setText("45.0");
             radioButton[2].setText("45.000000000");
@@ -181,31 +168,38 @@ integer ?");
 
     // declare right answers.
     boolean check() {
-        if (current == 0)
+        if (current[i] == 0)
             return (radioButton[2].isSelected());
-        if (current == 1)
+        if (current[i] == 1)
             return (radioButton[0].isSelected());
-        if (current == 2)
+        if (current[i] == 2)
             return (radioButton[1].isSelected());
-        if (current == 3)
+        if (current[i] == 3)
             return (radioButton[0].isSelected());
-        if (current == 4)
+        if (current[i] == 4)
             return (radioButton[0].isSelected());
-        if (current == 5)
+        if (current[i] == 5)
             return (radioButton[3].isSelected());
-        if (current == 6)
+        if (current[i] == 6)
             return (radioButton[0].isSelected());
-        if (current == 7)
+        if (current[i] == 7)
             return (radioButton[2].isSelected());
-        if (current == 8)
+        if (current[i] == 8)
             return (radioButton[3].isSelected());
-        if (current == 9)
+        if (current[i] == 9)
             return (radioButton[2].isSelected());
         return false;
     }
 
     public static void main(String s[]) {
         new OnlineTest("QUIZBEE");
+        Random rand = new Random();
+        for (int i = 0; i < current.length; i++) {
+            int randomIndexToSwap = rand.nextInt(current.length);
+            int temp = current[randomIndexToSwap];
+            current[randomIndexToSwap] = current[i];
+            current[i] = temp;
+        }
     }
 
 }
