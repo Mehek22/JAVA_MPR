@@ -113,11 +113,11 @@ public class OnlineTest extends JFrame implements  ActionListener{
             radioButton[3].setText("%w");
         }
         if (current[i] == 3) {
-            label.setText("Que4: What will be the output of the following program? \nint main() { \nint a,b,c,d,e,f,g,h,k;\na=8, b=4, c=2, d=1, e=5, f=20;  \n printf(%d,a+b-(c+d)*3%e+f/9);  \nreturn 0; \n}");
-            radioButton[0].setText("10");
-            radioButton[1].setText("9");
-            radioButton[2].setText("8");
-            radioButton[3].setText("20");
+            label.setText("Que4: 3. How is an array initialized in C language?");
+            radioButton[0].setText("int a[3]= {1,2,3};");
+            radioButton[1].setText("int a(3)= {!,2,3}");
+            radioButton[2].setText("int []a= new int[3]");
+            radioButton[3].setText("int a={1,2,3}");
         }
         if (current[i] == 4) {
             label.setText("Que5: Which one of the following is a valid C expression?");
@@ -155,11 +155,11 @@ public class OnlineTest extends JFrame implements  ActionListener{
             radioButton[3].setText("%");
         }
         if (current[i] == 9) {
-            label.setText("Que10: What is the output of the program.?\n int main()\n     {\n     float a = 45;\n     printf('%f', a);\n     return 0;\n    }");
-            radioButton[0].setText("45");
-            radioButton[1].setText("45.0");
-            radioButton[2].setText("45.000000000");
-            radioButton[3].setText("0.000000");
+            label.setText("Que10: How are String represented in memory in C?");
+            radioButton[0].setText("An array of characters");
+            radioButton[1].setText("Object of some class");
+            radioButton[2].setText("Same as other primitive types");
+            radioButton[3].setText("LinkedList of characters");
         }
         label.setBounds(30, 40, 450, 20);
         for (int i = 0, j = 0; i <= 90; i += 30, j++)
